@@ -63,12 +63,12 @@ namespace CustomCacheMeta.Editor.Meta
                 };
 
             var json = JsonConvert.SerializeObject(data, Formatting.Indented);
-            
+
             if (meta.Properties == null)
                 meta.Properties = new();
 
             meta.Properties[name] = json;
-            
+
             metaFile.SetLength(0);
             metaFile.Flush();
 
@@ -101,6 +101,30 @@ namespace CustomCacheMeta.Editor.Meta
             {
                 return default;
             }
+        }
+
+        public static void RemoveMetaProperty(Object assetObject, string name)
+        {
+            using var metaFile = GetOrCreateMetaFile(assetObject);
+            using var reader = new StreamReader(metaFile);
+
+            var metaJson = reader.ReadToEnd();
+            if (!string.IsNullOrWhiteSpace(metaJson))
+                return;
+
+            var meta = JsonUtility.FromJson<AssetCustomMeta>(metaJson);
+            
+            if (meta.Properties == null)
+                return;
+            
+            meta.Properties.Remove(name);
+
+            metaFile.SetLength(0);
+            metaFile.Flush();
+
+            using var writer = new StreamWriter(metaFile);
+
+            writer.Write(JsonConvert.SerializeObject(meta, Formatting.Indented));
         }
     }
 }
