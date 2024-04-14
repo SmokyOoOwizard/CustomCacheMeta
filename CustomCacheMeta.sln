@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCacheMeta.Editor", "CustomCacheMeta.Editor.csproj", "{34f2f8ac-e8e0-5c5d-93b2-04870d41b546}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{6b8fc401-f4bc-7775-faf4-a9c8ce5f4a18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34f2f8ac-e8e0-5c5d-93b2-04870d41b546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34f2f8ac-e8e0-5c5d-93b2-04870d41b546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6b8fc401-f4bc-7775-faf4-a9c8ce5f4a18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6b8fc401-f4bc-7775-faf4-a9c8ce5f4a18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

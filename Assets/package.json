@@ -1,0 +1,13 @@
+{
+    "name": "com.smokyooowizard.customcachemeta",
+    "displayName": "Custom Cache Meta",
+    "version": "1.0.0",
+    "unity": "2021.1",
+    "author": {
+		"name": "Smoky Wizard",
+		"email": "smoky-santa-claus@yandex.ru"
+	},
+	"dependencies": {
+		"com.unity.nuget.newtonsoft-json": "3.2.1"
+  }
+}
